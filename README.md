@@ -74,3 +74,30 @@ Product views are considerably more frequent than cart additions and purchases.
 - **S12 – Final Version:** Complete the project, evaluate the results and prepare the final documentation.
 
 The repository will be updated as the project progresses.
+## S6 – First Machine Learning Model
+
+In this stage, I developed my first Machine Learning model using **Logistic Regression** to predict whether a customer session would result in a purchase.
+
+The dataset was prepared at session level, with **47,646 examples**, divided into 38,116 training examples (80%) and 9,530 testing examples (20%).
+
+I used features related to the session start time and the first product viewed. The model was trained using `class_weight="balanced"` to account for the imbalance between purchase and non-purchase sessions.
+
+### Model Evaluation
+
+The results obtained on the test set were:
+
+- **Accuracy:** 40.41%
+- **Precision:** 6.81%
+- **Recall:** 64.77%
+- **F1-score:** 12.32%
+
+The model identified approximately 65% of the sessions containing purchases, but it also produced many false positive predictions. These results provide a baseline for future improvements.
+
+### Experiment Tracking
+
+The experiment was recorded in Weights & Biases under the name `S6-Primul-Model`.
+
+- [View Kaggle Notebook](https://www.kaggle.com/code/teodorasarahpeanc/ecommerce-eda-invatare-automata)
+- [View Weights & Biases Experiment](https://wandb.ai/teodorapeanca-university-of-craiova/ECommerce-Customer-Behavior-ML/runs/8js4w5y8)
+
+The next stage will focus on improving the model using additional features and comparing different algorithms.
